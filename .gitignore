@@ -1,0 +1,17 @@
+# Environment / credentials — never commit
+.env
+.env.local
+
+# Uploaded / generated attachments
+assets/uploads/
+hrd/assets/uploads/
+hrd/certificates/
+
+# Logs
+error_log
+hrd/error_log
+*.log
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
