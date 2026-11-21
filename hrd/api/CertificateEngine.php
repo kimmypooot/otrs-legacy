@@ -694,7 +694,7 @@ class CertificateEngine
             $mode === 'online'  => 'via Zoom application',
             $mode === 'hybrid'  => 'via a hybrid (in-person and online) setup',
             $mode === 'blended' => 'via a blended learning setup',
-            $venue !== ''       => "held at {$venue}",
+            $venue !== ''       => "held at the {$venue}",
             default             => '',
         };
 
@@ -878,7 +878,7 @@ class CertificateEngine
 
         $heldClause = $mode === 'online'
             ? 'held via Zoom Workplace'
-            : ($venue !== '' ? "held at {$venue}" : '');
+            : ($venue !== '' ? "held at the {$venue}" : '');
 
         $para1 = 'This is to certify that '
             . '<span style="font-family:' . $fCalibriBold . ';color:' . $navyHex . ';text-decoration:underline;">'
@@ -891,7 +891,7 @@ class CertificateEngine
 
         $para2 = '<span style="font-family:' . $fCalibriBold . ';">'
             . 'This further certifies that this Certificate of Appearance shall not substitute '
-            . 'for the Certificate of Training which shall only be issued upon full payment of the registration fee.'
+            . 'for the Certificate of Training which shall only be issued upon full payment of the registration fee and completion of the required training hours.'
             . '</span>';
 
         // "Issued ... this {last day of training}{st/th}, {location}." — location
@@ -920,7 +920,7 @@ class CertificateEngine
         $plain1 = "This is to certify that {$paxName} attended the {$title} on {$date}"
             . ($heldClause !== '' ? ", {$heldClause}" : '') . '.';
         $plain2 = 'This further certifies that this Certificate of Appearance shall not substitute '
-            . 'for the Certificate of Training which shall only be issued upon full payment of the registration fee.';
+            . 'for the Certificate of Training which shall only be issued upon full payment of the registration fee and completion of the required training hours.';
         $plain3 = "Issued this {$givenD}{$sfx} of {$givenMY} at the {$location} for whatever purpose it may serve.";
 
         // Indented, justified body — same margins/indent convention as renderCertification().
